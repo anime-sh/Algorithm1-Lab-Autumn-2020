@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "C/C++: g++ build active file",
+			"command": "/usr/bin/g++",
+			"args": [
+				"-std=c++17",
+				"-Wshadow",
+				"-Wall",
+				"-Wextra",
+				"-pedantic",
+				"-Wformat=2",
+				"-Wfloat-equal",
+				"-Wconversion",
+				"-Wlogical-op",
+				"-Wshift-overflow=2",
+				"-Wduplicated-cond",
+				"-Wcast-qual",
+				"-Wcast-align",
+				"-Wno-unused-result",
+				"-Wno-sign-conversion",
+				"-D_GLIBCXX_DEBUG_PEDANTIC",
+				"-fno-sanitize-recover=all",
+				"-fstack-protector",
+				"-D_FORTIFY_SOURCE=2",
+				"-fsanitize=address",
+				"-fsanitize=undefined",
+				"-D_GLIBCXX_DEBUG",
+				"-g",
+				"-DLMAO",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build"
+		}
+	]
+}

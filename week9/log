@@ -1,0 +1,127 @@
+9 9
+8 9
+8 8
+9 8
+9 7
+8 7
+8 6
+8 5
+9 5
+9 4
+9 3
+8 3
+7 3
+7 2
+6 2
+5 2
+4 2
+4 1
+4 0
+3 0
+2 0
+1 0
+0 0
+0 0
+0 1
+0 2
+1 0
+1 1
+2 0
+3 0
+3 1
+4 0
+4 1
+4 2
+5 0
+5 2
+6 0
+6 2
+7 2
+7 1
+7 3
+7 4
+6 4
+5 4
+5 5
+6 5
+8 3
+9 3
+9 4
+9 5
+8 5
+8 6
+7 6
+8 7
+8 8
+7 8
+6 8
+6 7
+5 7
+4 7
+3 7
+2 7
+1 7
+1 8
+0 8
+0 9
+2 8
+2 9
+3 8
+4 6
+6 9
+8 9
+9 7
+9 8
+9 9
+
+=================================================================
+==25765==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 184 byte(s) in 1 object(s) allocated from:
+    #0 0x7fcc986c7608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x55ae54885012 in main /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:169
+    #2 0x7fcc9716db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Direct leak of 80 byte(s) in 1 object(s) allocated from:
+    #0 0x7fcc986c7608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x55ae548833ba in main /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:90
+    #2 0x7fcc9716db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Direct leak of 80 byte(s) in 1 object(s) allocated from:
+    #0 0x7fcc986c7608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x55ae54881a6e in leastTimeDijkstra(int, int, int, int, int**, int**, coord**, int) /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:36
+    #2 0x55ae5488625a in main /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:190
+    #3 0x7fcc9716db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Direct leak of 80 byte(s) in 1 object(s) allocated from:
+    #0 0x7fcc986c7608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x55ae54883352 in main /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:89
+    #2 0x7fcc9716db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Direct leak of 80 byte(s) in 1 object(s) allocated from:
+    #0 0x7fcc986c7608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x55ae548832ea in main /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:88
+    #2 0x7fcc9716db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Indirect leak of 800 byte(s) in 10 object(s) allocated from:
+    #0 0x7fcc986c7608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x55ae54883529 in main /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:95
+    #2 0x7fcc9716db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Indirect leak of 400 byte(s) in 10 object(s) allocated from:
+    #0 0x7fcc986c7608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x55ae54881ad6 in leastTimeDijkstra(int, int, int, int, int**, int**, coord**, int) /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:39
+    #2 0x55ae5488625a in main /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:190
+    #3 0x7fcc9716db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Indirect leak of 400 byte(s) in 10 object(s) allocated from:
+    #0 0x7fcc986c7608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x55ae548835ee in main /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:96
+    #2 0x7fcc9716db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Indirect leak of 400 byte(s) in 10 object(s) allocated from:
+    #0 0x7fcc986c7608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x55ae54883464 in main /home/animesh/Documents/Autumn 2020/Algo/Lab/week9/19CS10070_G11_Assign8.cpp:94
+    #2 0x7fcc9716db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: 2504 byte(s) leaked in 45 allocation(s).

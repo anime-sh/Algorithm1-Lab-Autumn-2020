@@ -1,0 +1,20 @@
+Part 1 (6)
+4: Frequency Counted
+2: Output saved to file properly
+
+Part 2 (10)
+7: Logic
+	-1: Precedence not followed
+	-1: supernode not used
+	-7: Instructed data structure not used
+3: output
+	-1: preorder not printed to file
+	-2: list of huffman codes not printed to file
+
+Part 3 (2)
+1: Logic
+1: Output
+
+Part 4: (2)
+1: Logic
+1: Output

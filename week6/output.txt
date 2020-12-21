@@ -1,0 +1,4 @@
+0.008
+reaction 1 : 1
+reaction 2 : 3
+reaction 3 : 1

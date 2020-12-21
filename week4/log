@@ -1,0 +1,89 @@
+0x7ffe58a16150 -1, -1 0
+0x7ffe58a16150 1, 2 0x602000000010
+0x7ffe58a16150 3, 4 0x602000000030
+0x7ffe58a16150 5, 6 0x602000000050
+0x7ffe58a16150 7, 8 0x602000000070
+deleted: 7,8	5, 6 0x602000000050
+deleted: 5,6	3, 4 0x602000000030
+deleted: 3,4	1, 2 0x602000000010
+deleted: 1,2	-1, -1 0
+exit
+
+=================================================================
+==31720==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 168 byte(s) in 1 object(s) allocated from:
+    #0 0x7ff575d60608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x559348e5185b in init(QUEUE*, int) (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0x885b)
+    #2 0x559348e55545 in strategy1(int**, int, int, POINT, POINT) (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xc545)
+    #3 0x559348e57f31 in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xef31)
+    #4 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Direct leak of 48 byte(s) in 1 object(s) allocated from:
+    #0 0x7ff575d60608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x559348e5729f in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xe29f)
+    #2 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Direct leak of 32 byte(s) in 1 object(s) allocated from:
+    #0 0x7ff575d60608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x559348e552c6 in strategy1(int**, int, int, POINT, POINT) (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xc2c6)
+    #2 0x559348e57f31 in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xef31)
+    #3 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Direct leak of 32 byte(s) in 1 object(s) allocated from:
+    #0 0x7ff575d60608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x559348e57237 in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xe237)
+    #2 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Direct leak of 32 byte(s) in 1 object(s) allocated from:
+    #0 0x7ff575d60608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x559348e560ec in strategy2(int**, int, int, POINT, POINT) (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xd0ec)
+    #2 0x559348e5801e in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xf01e)
+    #3 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Direct leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x7ff575d60448 in operator new(unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0448)
+    #1 0x559348e52443 in push(STACK*, POINT) (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0x9443)
+    #2 0x559348e54136 in STACKDEBUG() (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xb136)
+    #3 0x559348e58038 in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xf038)
+    #4 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Indirect leak of 80 byte(s) in 4 object(s) allocated from:
+    #0 0x7ff575d60608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x559348e57371 in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xe371)
+    #2 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Indirect leak of 80 byte(s) in 4 object(s) allocated from:
+    #0 0x7ff575d60608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x559348e5615a in strategy2(int**, int, int, POINT, POINT) (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xd15a)
+    #2 0x559348e5801e in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xf01e)
+    #3 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Indirect leak of 80 byte(s) in 4 object(s) allocated from:
+    #0 0x7ff575d60608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x559348e55334 in strategy1(int**, int, int, POINT, POINT) (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xc334)
+    #2 0x559348e57f31 in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xef31)
+    #3 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Indirect leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x7ff575d60448 in operator new(unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0448)
+    #1 0x559348e52443 in push(STACK*, POINT) (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0x9443)
+    #2 0x559348e53b53 in STACKDEBUG() (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xab53)
+    #3 0x559348e58038 in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xf038)
+    #4 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Indirect leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x7ff575d60448 in operator new(unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0448)
+    #1 0x559348e52443 in push(STACK*, POINT) (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0x9443)
+    #2 0x559348e53573 in STACKDEBUG() (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xa573)
+    #3 0x559348e58038 in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xf038)
+    #4 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+Indirect leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x7ff575d60448 in operator new(unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0448)
+    #1 0x559348e52443 in push(STACK*, POINT) (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0x9443)
+    #2 0x559348e52f93 in STACKDEBUG() (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0x9f93)
+    #3 0x559348e58038 in main (/home/animesh/Documents/Autumn 2020/Algo/Lab/week4/a.out+0xf038)
+    #4 0x7ff5745eeb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: 616 byte(s) leaked in 21 allocation(s).

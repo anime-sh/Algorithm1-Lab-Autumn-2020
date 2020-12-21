@@ -1,0 +1,61 @@
+Part 1 and 2: 50 marks
+
+Marks for Correct Output (Total: 10)
+Run the program and give the input from the sample input files. There are two test cases, f1_input1.txt and f1_input2.txt.
+Marks for each test case: 5
+• Correct schedule printed: 3
+o Give at least 1 out of 3 unless totally wrong, give 2 if more or less correct but not fully correct. Use your judgement
+• Correct Turnaround time printed: 2
+o For this, marking is binary, 0 or 2
+Ignore minor format changes and extra messages etc. in print
+
+Marks for Code (Total 40)
+Part 1 (Hep Functions): 15
+• Insert (): 7
+o Initial insert as last element correct: 2
+o Sift-up to correct position: 5
+Deduct -1 if they do not consider the case of equal remLength value (need to consider jobId then)
+
+• ExtractMin(): 8
+o Removing root element, copying last element to root, adjusting numJobs: 3
+o Sift-down to correct position: 5
+Deduct -1 if they do not consider the case of equal remLength value (need to consider jobId then)
+They can write as many other functions as they want, but these two and initHeap must be there
+Deduct -1 if prototypes do not match (for each of the three functions).
+
+Part 2 (Scheduler): 25
+• Adding new jobs to queue: 5
+o Sorting by start value (counting sort): 5 (give 1 if Counting sort not used)
+o Finding all new jobs that start at a time instant: 2 (give 1 if they do not consider > 1 job starting at same time)
+o Adding jobs to queue by calling insert: 2
+• Monitoring finish of current job: 4
+o Decreasing remLength at each step and checking for 0: 3
+o Resetting current job id to 0 if no job in queue: 1
+• Scheduling new job: 8
+o Choosing right job to sechdule: 4
+o Re-inserting a job to queue if not chosen: 4
+• Turnaround time calculation: 4
+• Printing schedule at each timestep correctly: 2
+Deduct -2 if prototype does not match.
+
+
+Part 3:
+
+Total Marks: 25
+Marks for Correct Output (Total: 5)
+Run the program and give the input from the sample input files. There are two test cases, f2_input1.txt and f2_input2.txt.
+Marks for each test case: 2.5 x 2
+• Printing correct schedule: 2.5
+Marking is binary, 2.5 if full schedule correct, 0 otherwise
+
+
+Marks for Code (Total 20)
+Part 3 (New Scheduler): 20
+• decreaseKey(): 10
+o Initializing n-sized array for keeping index in heap of each job: 2
+o keeping track of index of each job id (so that the location in heap for each job can be found in O(1) time): 5
+o readjusting heap after decreasing key value: 3
+• Changes in initHeap, insert, extractmin to swap location ids also properly: 1 + 2 + 2 = 5
+• New Scheduler: 5
+o Given a job, finding if any other job depends on it in O(1) time: 3
+o Calling decreaseKey: 2
